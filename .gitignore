@@ -1,0 +1,12 @@
+src/Site/bin/
+src/Site/obj/
+src/Core/bin/
+src/Core/obj/
+src/Grains/bin/
+src/Grains/obj/
+src/Infrastructure/bin/
+src/Infrastructure/obj/
+src/Silo/bin/
+src/Silo/obj/
+src/Site.Core/bin/
+src/Site.Core/obj/
