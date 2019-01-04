@@ -8,7 +8,7 @@ namespace Core.Processors
 {
 	public class InventoryProcessor
 	{
-		public async Task<IEnumerable<Inventory>> Get(long productId)
+		public async Task<IEnumerable<Inventory>> GetInventory(long productId, IEnumerable<string> tags = null)
 		{
 			return new List<Inventory>()
 			{
@@ -21,7 +21,7 @@ namespace Core.Processors
 
 		public async Task<IEnumerable<ProductInWarehouse>> GetWarehouseInventory(long warehouseId)
 		{
-
+			return new List<ProductInWarehouse>();
 		}
 	}
 }

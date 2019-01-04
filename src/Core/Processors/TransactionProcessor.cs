@@ -10,12 +10,12 @@ namespace Core.Processors
 	{
 		public async Task<IEnumerable<Transaction>> GetAccountTransaction(long accountId)
 		{
-
+			return new List<Transaction>();
 		}
 
 		public async Task<IEnumerable<Transaction>> GetInvoiceTransaction(long invoiceId)
 		{
-
+			return new List<Transaction>();
 		}
 	}
 }

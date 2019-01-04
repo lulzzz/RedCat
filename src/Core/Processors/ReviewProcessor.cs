@@ -10,7 +10,12 @@ namespace Core.Processors
 	{
 		public async Task<IEnumerable<Review>> GetProductReviews(long productId)
 		{
+			return new List<Review>();
+		}
 
+		public async Task<IEnumerable<Review>> GetCustomerReviews(long customerId)
+		{
+			return new List<Review>();
 		}
 	}
 }

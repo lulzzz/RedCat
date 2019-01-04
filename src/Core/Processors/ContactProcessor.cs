@@ -10,7 +10,7 @@ namespace Core.Processors
 	{
 		public async Task<IEnumerable<Contact>> Get(IEnumerable<long> ids)
 		{
-
+			return new List<Contact>();
 		}
 	}
 }

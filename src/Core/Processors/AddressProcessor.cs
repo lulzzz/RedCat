@@ -7,7 +7,7 @@ namespace Core.Processors
 	{
 		public async Task<Address> GetAddress(long addressId)
 		{
-
+			return new Address();
 		}
 	}
 }

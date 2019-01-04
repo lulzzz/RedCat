@@ -6,5 +6,6 @@ namespace Core.Entities
 {
 	public class Payment : BaseEntity
 	{
+		public int Status { get; set; }
 	}
 }

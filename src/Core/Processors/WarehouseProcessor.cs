@@ -10,12 +10,12 @@ namespace Core.Processors
 	{
 		public async Task<Warehouse> Get(long id)
 		{
-
+			return new Warehouse();
 		}
 
 		public async Task<IEnumerable<ProductInWarehouse>> GetProductInWarehouse(long productId)
 		{
-
+			return new List<ProductInWarehouse>();
 		}
 	}
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
@@ -8,7 +7,6 @@ using Infrastructure.Database.Migrations.Migrator;
 using Grains.Providers.Storage;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using NLog;
 using NLog.Extensions.Logging;
 using NLog.Web;
@@ -18,7 +16,6 @@ using Orleans.Hosting;
 using Orleans.Versions.Compatibility;
 using Orleans.Versions.Selector;
 using Silo.Configuration;
-using Core.Entities;
 
 namespace Silo
 {
@@ -26,12 +23,6 @@ namespace Silo
 	{
 		private static async Task<int> Main(string[] args)
 		{
-			var a = new Product();
-
-			var res = await a.Inventory;
-
-			var g = a.Inventory;
-
 			string environmentName = Environment.GetEnvironmentVariable("SERVER_ENVIRONMENT");
 			Logger logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
 			IConfigurationRoot configuration = new ConfigurationBuilder()

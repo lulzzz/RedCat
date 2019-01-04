@@ -17,7 +17,7 @@ namespace Site.Core
 	public class OrleansConnector
 	{
 		private string connectionString;
-		private IClusterClient client;
+		private IClusterClient client { get; set; } = null;
 		ILogger<OrleansConnector> logger;
 
 		public IClusterClient Client
@@ -26,7 +26,15 @@ namespace Site.Core
 			{
 				if (client == null || !client.IsInitialized)
 				{
-					client = Connect().Result;
+					try
+					{
+						client = Connect().Result;
+					}
+					catch(Exception ex)
+					{
+						// Log and ignore
+						logger.LogError("Can't connect to Orleans cluster", ex);
+					}
 				}
 
 				return client;
@@ -36,7 +44,7 @@ namespace Site.Core
 		public OrleansConnector(IConfiguration configuration, ILogger<OrleansConnector> logger)
 		{
 			this.connectionString = configuration.GetConnectionString("SystemConnection");
-			this.logger = logger;		
+			this.logger = logger;
 		}
 
 		/// <summary>

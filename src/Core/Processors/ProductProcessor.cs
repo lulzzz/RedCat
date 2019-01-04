@@ -10,7 +10,7 @@ namespace Grains.Processors
 	{
 		public async Task<Product> GetProduct(long productId)
 		{
-
+			return new Product();
 		}
 	}
 }

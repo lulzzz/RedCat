@@ -10,7 +10,7 @@ namespace Core.Processors
 	{
 		public async Task<Customer> GetCustomer(long id)
 		{
-
+			return new Customer();
 		}
 	}
 }

@@ -27,21 +27,45 @@ namespace Core.Entities
 		private Lazy<Task<IEnumerable<StoreSummary>>> _stores;
 		public Task<IEnumerable<StoreSummary>> Stores { get { return _stores.Value; } }
 
+		/// <summary>
+		/// Get billing address
+		/// </summary>
+		private Lazy<Task<IEnumerable<Review>>> _reviews;
+		public Task<IEnumerable<Review>> Reviews { get { return _reviews.Value; } }
+
+		/// <summary>
+		/// Get Account
+		/// </summary>
+		private Lazy<Task<Account>> _account;
+		public Task<Account> Account { get { return _account.Value; } }
+
+		/// <summary>
+		/// Get Address
+		/// </summary>
+		private Lazy<Task<Address>> _address;
+		public Task<Address> BillingAddress { get { return _address.Value; } }
+
 		public Customer()
 		{
 			_stores = new Lazy<Task<IEnumerable<StoreSummary>>>(async () =>
 			{
 				return await new StoreProcessor().GetUserStores(Id);
 			});
+
+			_reviews = new Lazy<Task<IEnumerable<Review>>>(async () =>
+			{
+				return await new ReviewProcessor().GetCustomerReviews(Id);
+			});
+
+			_account = new Lazy<Task<Account>>(async () =>
+			{
+				return await new AccountProcessor().GetAccount(AccountId);
+			});
+
+			_address = new Lazy<Task<Address>>(async () =>
+			{
+				return await new AddressProcessor().GetAddress(AddressId);
+			});
 		}
 	}
 }
-
-public Account Account;
-public Address Address { get; set; }
-
-public IEnumerable<Order> Orders { get; set; 
-
-
-public IEnumerable<Review> Reviews { get; set; }
-

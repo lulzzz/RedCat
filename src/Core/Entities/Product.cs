@@ -14,6 +14,9 @@ namespace Core.Entities
 		public string SKU { get; set; }
 		public bool IsEnabled { get; set; }
 
+		public int ProductType { get; set; }
+		public string DownloadLink { get; set; }
+
 		public string Manufacturer { get; set; }
 		public string Brand { get; set; }
 		public string Collection { get; set; }
@@ -35,6 +38,8 @@ namespace Core.Entities
 		public float? Width { get; set; }
 		public float? Height { get; set; }
 		public float? Depth { get; set; }
+
+		public Dictionary<string, IEnumerable<string>> Selectors { get; set; }
 
 		#region Navigations 
 		/// <summary>
@@ -77,12 +82,12 @@ namespace Core.Entities
 		{
 			_inventory = new Lazy<Task<IEnumerable<Inventory>>>(async () =>
 			{
-				return await new InventoryProcessor().Get(Id);
+				return await new InventoryProcessor().GetInventory(Id);
 			});
 
 			_productInStores = new Lazy<Task<IEnumerable<Store>>>(async () =>
 			{
-				return await new StoreProcessor().Get(Id);
+				return await new StoreProcessor().GetStoresWithProduct(Id);
 			});
 
 			_productInOrders = new Lazy<Task<IEnumerable<OrderSummary>>>(async () =>

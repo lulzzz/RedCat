@@ -1,5 +1,6 @@
 ﻿using Core.Processors;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Core.Entities
@@ -7,6 +8,7 @@ namespace Core.Entities
 	public class Inventory : BaseEntity
 	{
 		public long ProductId { get; set; }
+		public string ExternalSKU { get; set; }
 		public long? WarehouseId { get; set; }
 		public int ShippingDays { get; set; }
 		public int Availability { get; set; }
@@ -14,6 +16,8 @@ namespace Core.Entities
 		public decimal Price { get; set; }
 		public int Quantity { get; set; }
 		public string Comment { get; set; }
+
+		public Dictionary<string, string> Selector;
 
 		/// <summary>
 		/// Get warehouse

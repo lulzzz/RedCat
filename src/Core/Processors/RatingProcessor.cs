@@ -10,7 +10,7 @@ namespace Core.Processors
 	{
 		public async Task<RatingSummary> GetSummary(long productId)
 		{
-
+			return new RatingSummary();
 		}
 	}
 }

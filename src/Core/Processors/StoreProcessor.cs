@@ -10,17 +10,17 @@ namespace Core.Processors
 	{
 		public async Task<Store> GetStore(long storeId)
 		{
-
+			return new Store();
 		}
 
 		public async Task<IEnumerable<Store>> GetStoresWithProduct(long productId)
 		{
-
+			return new List<Store>();
 		}
 
 		public async Task<IEnumerable<StoreSummary>> GetUserStores(long userId)
 		{
-
+			return new List<StoreSummary>();
 		}
 	}
 }

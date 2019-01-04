@@ -11,6 +11,7 @@ namespace Core.Processors
 	{
 		public async Task<IEnumerable<Invoice>> GetCustomerInvoices(long customerId)
 		{
+			return new List<Invoice>();
 
 		}
 	}

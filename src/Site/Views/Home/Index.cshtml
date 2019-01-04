@@ -1,8 +1,870 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@{ 
+	Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="~/lib/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="~/lib/select2/css/select2.min.css" />
+	<link rel="stylesheet" type="text/css" href="~/lib/jquery.bxslider/jquery.bxslider.css" />
+	<link rel="stylesheet" type="text/css" href="~/lib/owl.carousel/owl.carousel.css" />
+	<link rel="stylesheet" type="text/css" href="~/lib/jquery-ui/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="~/css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="~/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="~/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="~/css/responsive.css" />
+	<link rel="stylesheet" type="text/css" href="~/css/option4.css" />
+	<title>Option4 - Kute shop - themelock.com</title>
+</head>
+<body class="home option4">
+	<!-- HEADER -->
+	<div id="header" class="header">
+		<div class="top-header">
+			<div class="container">
+				<div class="nav-top-links">
+					<a class="first-item" href="#"><img alt="phone" src="~/images/phone.png" />00-62-658-658</a>
+					<a href="#"><img alt="email" src="~/images/email.png" />Contact us today!</a>
+				</div>
+				<div class="currency ">
+					<div class="dropdown">
+						<a class="current-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">USD</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Dollar</a></li>
+							<li><a href="#">Euro</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="language ">
+					<div class="dropdown">
+						<a class="current-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+							<img src="~/images/flags/fr.png" class="flag" />French
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#"><img src="~/images/flags/gb.png" class="flag" />English</a></li>
+							<li><a href="#"><img src="~/images/flags/fr.png" class="flag" />French</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="support-link">
+					<a href="#">Services</a>
+					<a href="#">Support</a>
+				</div>
+				<div id="user-info-top" class="user-info pull-right">
+					<div class="dropdown">
+						<a class="current-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><span>My Account</span></a>
+						<ul class="dropdown-menu mega_dropdown" role="menu">
+							<li><a href="login.html">Login</a></li>
+							<li><a href="#">Compare</a></li>
+							<li><a href="#">Wishlists</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/.top-header -->
+		<!-- MAIN HEADER -->
+		<div class="container main-header">
+			<div class="row">
+				<div class="col-xs-12 col-sm-3 logo">
+					<a href="index.html"><img alt="Kute shop - themelock.com" src="~/images/logo.png" /></a>
+				</div>
+				<div class="col-xs-7 col-sm-7 header-search-box">
+					<form class="form-inline">
+						<div class="form-group form-category">
+						</div>
+						<div class="form-group input-serach">
+							<input type="text" placeholder="Keyword here...">
+						</div>
+						<button type="submit" class="pull-right btn-search"></button>
+					</form>
+				</div>
+				<div id="cart-block" class="col-xs-5 col-sm-2 shopping-cart-box">
+					<a class="cart-link" href="order.html">
+						<span class="title">Shopping cart</span>
+						<span class="total">2 items - 122.38 €</span>
+						<span class="notify notify-left">2</span>
+					</a>
+					<div class="cart-block">
+						<div class="cart-block-content">
+							<h5 class="cart-title">2 Items in my cart</h5>
+							<div class="cart-block-list">
+								<ul>
+									<li class="product-info">
+										<div class="p-left">
+											<a href="#" class="remove_link"></a>
+											<a href="#">
+												<img class="img-responsive" src="assets/data/product-100x122.jpg" alt="p10">
+											</a>
+										</div>
+										<div class="p-right">
+											<p class="p-name">Donec Ac Tempus</p>
+											<p class="p-rice">61,19 €</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="toal-cart">
+								<span>Total</span>
+								<span class="toal-price pull-right">122.38 €</span>
+							</div>
+							<div class="cart-buttons">
+								<a href="order.html" class="btn-check-out">Checkout</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END MANIN HEADER -->
+
+		<div class="nav-top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3" id="box-vertical-megamenus">
+						<div class="box-vertical-megamenus">
+							<h4 class="title">
+								<span class="title-menu">Categories</span>
+								<span class="btn-open-mobile pull-right home-page"><i class="fa fa-bars"></i></span>
+							</h4>
+							<div class="vertical-menu-content is-home">
+								<ul class="vertical-menu-list">
+									<li><a href="#"><img class="icon-menu" alt="Funky roots" src="assets/data/12.png">Electronics</a></li>
+									<li>
+										<a class="parent" href="#"><img class="icon-menu" alt="Funky roots" src="assets/data/13.png">Sports &amp; Outdoors</a>
+										<div class="vertical-dropdown-menu">
+											<div class="vertical-groups col-sm-12">
+												<div class="mega-group col-sm-4">
+													<h4 class="mega-group-header"><span>Tennis</span></h4>
+													<ul class="group-link-default">
+														<li><a href="#">Tennis</a></li>
+													</ul>
+												</div>
+												<div class="mega-group col-sm-4">
+													<h4 class="mega-group-header"><span>Swimming</span></h4>
+													<ul class="group-link-default">
+														<li><a href="#">Intimates</a></li>
+													</ul>
+												</div>
+												<div class="mega-group col-sm-4">
+													<h4 class="mega-group-header"><span>Shoes</span></h4>
+													<ul class="group-link-default">
+														<li><a href="#">Dresses</a></li>
+													</ul>
+												</div>
+												<div class="mega-custom-html col-sm-12">
+													<a href="#"><img src="assets/data/banner-megamenu.jpg" alt="Banner"></a>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="all-category"><span class="open-cate">All Categories</span></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-5 col-md-7 group-link-main-menu">
+
+						<a class="link-menu">Link 1</a>
+						<a class="link-menu">Link 2</a>
+
+
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+	<!-- Home slideder-->
+	<div id="home-slider">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 slider-left"></div>
+				<div class="col-sm-9 header-top-right">
+					<div class="header-top-right-wapper">
+						<div class="homeslider">
+							<div class="content-slide">
+								<ul id="contenhomeslider">
+									<li><img alt="Funky roots" src="assets/data/option4/slider1.jpg" title="Funky roots" /></li>
+									<li><img alt="Funky roots" src="assets/data/option4/slider2.jpg" title="Funky roots" /></li>
+									<li><img alt="Funky roots" src="assets/data/option4/slider3.jpg" title="Funky roots" /></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END Home slideder-->
+	<!-- top banner -->
+	<div class="group-banner4">
+		<div class="container">
+			<ul class="list-banner">
+				<li>
+					<div class="banner-opacity"><a href="#"><img src="assets/data/option4/banner3.jpg" alt="Banner"></a></div>
+				</li>
+				<li>
+					<div class="banner-opacity"><a href="#"><img src="assets/data/option4/banner4.jpg" alt="Banner"></a></div>
+				</li>
+				<li>
+					<div class="banner-opacity"><a href="#"><img src="assets/data/option4/banner5.jpg" alt="Banner"></a></div>
+				</li>
+				<li>
+					<div class="banner-opacity"><a href="#"><img src="assets/data/option4/banner6.jpg" alt="Banner"></a></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- ./top banner -->
+	<!-- Hot deals -->
+	<div class="hot-deals-row">
+		<div class="container">
+			<div class="hot-deals-box">
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-4">
+						<div class="hot-deals-tab">
+							<div class="hot-deals-title vertical-text">
+								<span>h</span>
+								<span>o</span>
+								<span>t</span>
+								<span class="yellow">d</span>
+								<span class="yellow">e</span>
+								<span class="yellow">a</span>
+								<span class="yellow">l</span>
+								<span class="yellow">s</span>
+							</div>
+							<div class="hot-deals-tab-box">
+								<ul class="nav-tab">
+									<li class="active"><a data-toggle="tab" href="#hot-deal-1">UP TO 40% OFF</a></li>
+									<li><a data-toggle="tab" href="#hot-deal-2">UP TO 50% OFF</a></li>
+									<li><a data-toggle="tab" href="#hot-deal-1">UP TO 60% OFF</a></li>
+									<li><a data-toggle="tab" href="#hot-deal-2">UP TO 70% OFF</a></li>
+									<li><a data-toggle="tab" href="#hot-deal-1">UP TO 80% OFF</a></li>
+								</ul>
+								<di class="box-count-down">
+									<span class="countdown-lastest" data-y="2015" data-m="9" data-d="1" data-h="00" data-i="00" data-s="00"></span>
+								</di>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-12 col-lg-8 hot-deals-tab-content-col">
+						<div class="hot-deals-tab-content tab-container">
+							<div id="hot-deal-1" class="tab-panel active">
+								<ul class="product-list owl-carousel nav-center" data-dots="false" data-loop="true" data-nav="true" data-margin="29" data-autoplayTimeout="1000" data-autoplayHoverPause="true" data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":4}}'>
+									<li>
+										<div class="left-block">
+											<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p3.jpg" /></a>
+
+										</div>
+										<div class="price-percent-reduction2">
+											-33% OFF
+										</div>
+										<div class="right-block">
+											<h5 class="product-name"><a href="#">Luxury Perfume</a></h5>
+											<div class="content_price">
+												<span class="price product-price">$38,95</span>
+												<span class="price old-price">$52,00</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="left-block">
+											<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p4.jpg" /></a>
+										</div>
+										<div class="right-block">
+											<h5 class="product-name"><a href="#">Blue Diamond Ring</a></h5>
+											<div class="content_price">
+												<span class="price product-price">$38,95</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="left-block">
+											<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p5.jpg" /></a>
+										</div>
+										<div class="right-block">
+											<h5 class="product-name"><a href="#">Superior Bag</a></h5>
+											<div class="content_price">
+												<span class="price product-price">$38,95</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="left-block">
+											<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p6.jpg" /></a>
+										</div>
+										<div class="right-block">
+											<h5 class="product-name"><a href="#">Luxury Lady</a></h5>
+											<div class="content_price">
+												<span class="price product-price">$38,95</span>
+												<span class="price old-price">$52,00</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="left-block">
+											<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p7.jpg" /></a>
+										</div>
+										<div class="right-block">
+											<h5 class="product-name"><a href="#">Smart Phone</a></h5>
+											<div class="content_price">
+												<span class="price product-price">$38,95</span>
+												<span class="price old-price">$52,00</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div id="hot-deal-2" class="tab-panel">
+								<ul class="product-list owl-carousel nav-center" data-dots="false" data-loop="true" data-nav="true" data-margin="29" data-autoplayTimeout="1000" data-autoplayHoverPause="true" data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":4}}'>
+									<li>
+										<div class="left-block">
+											<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p8.jpg" /></a>
+
+										</div>
+										<div class="price-percent-reduction2">
+											-30% OFF
+										</div>
+										<div class="right-block">
+											<h5 class="product-name"><a href="#">Luxury Perfume</a></h5>
+											<div class="content_price">
+												<span class="price product-price">$38,95</span>
+												<span class="price old-price">$52,00</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="left-block">
+											<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p9.jpg" /></a>
+										</div>
+										<div class="right-block">
+											<h5 class="product-name"><a href="#">Blue Diamond Ring</a></h5>
+											<div class="content_price">
+												<span class="price product-price">$38,95</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="left-block">
+											<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p10.jpg" /></a>
+										</div>
+										<div class="right-block">
+											<h5 class="product-name"><a href="#">Superior Bag</a></h5>
+											<div class="content_price">
+												<span class="price product-price">$38,95</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="left-block">
+											<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p11.jpg" /></a>
+										</div>
+										<div class="right-block">
+											<h5 class="product-name"><a href="#">Luxury Lady</a></h5>
+											<div class="content_price">
+												<span class="price product-price">$38,95</span>
+												<span class="price old-price">$52,00</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="left-block">
+											<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p12.jpg" /></a>
+										</div>
+										<div class="right-block">
+											<h5 class="product-name"><a href="#">Smart Phone</a></h5>
+											<div class="content_price">
+												<span class="price product-price">$38,95</span>
+												<span class="price old-price">$52,00</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ./Hot deals -->
+	<!-- box product new arrivals -->
+	<div class="box-products new-arrivals">
+		<div class="container">
+			<div class="box-product-head">
+				<span class="box-title">NEW ARRIVALS IN</span>
+				<ul class="box-tabs nav-tab">
+					<li><a data-toggle="tab" href="#tab-2">All</a></li>
+					<li class="active"><a data-toggle="tab" href="#tab-1">Women Fashion</a></li>
+					<li><a data-toggle="tab" href="#tab-1">Bags</a></li>
+					<li><a data-toggle="tab" href="#tab-2">SHOES</a></li>
+					<li><a data-toggle="tab" href="#tab-1">GLASSES</a></li>
+				</ul>
+			</div>
+			<div class="box-product-content">
+				<div class="box-product-adv">
+					<ul class="owl-carousel nav-center" data-items="1" data-dots="false" data-autoplay="true" data-loop="true" data-nav="true">
+						<li><a href="#"><img src="assets/data/option4/adv1.jpg" alt="adv"></a></li>
+						<li><a href="#"><img src="assets/data/option4/adv1.jpg" alt="adv"></a></li>
+					</ul>
+				</div>
+				<div class="box-product-list">
+					<div class="tab-container">
+						<div id="tab-1" class="tab-panel active">
+							<ul class="product-list owl-carousel nav-center" data-dots="false" data-loop="true" data-nav="true" data-margin="10" data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":4}}'>
+								<li>
+									<div class="left-block">
+										<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p13.jpg" /></a>
+										<div class="quick-view">
+											<a title="Add to my wishlist" class="heart" href="#"></a>
+											<a title="Add to compare" class="compare" href="#"></a>
+											<a title="Quick view" class="search" href="#"></a>
+										</div>
+										<div class="add-to-cart">
+											<a title="Add to Cart" href="#">Add to Cart</a>
+										</div>
+									</div>
+									<div class="right-block">
+										<h5 class="product-name"><a href="#">Luxury Perfume</a></h5>
+										<div class="content_price">
+											<span class="price product-price">$38,95</span>
+											<span class="price old-price">$52,00</span>
+										</div>
+									</div>
+									<div class="price-percent-reduction2">
+										-30% OFF
+									</div>
+								</li>
+								<li>
+									<div class="left-block">
+										<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p14.jpg" /></a>
+										<div class="quick-view">
+											<a title="Add to my wishlist" class="heart" href="#"></a>
+											<a title="Add to compare" class="compare" href="#"></a>
+											<a title="Quick view" class="search" href="#"></a>
+										</div>
+										<div class="add-to-cart">
+											<a title="Add to Cart" href="#">Add to Cart</a>
+										</div>
+									</div>
+									<div class="right-block">
+										<h5 class="product-name"><a href="#">Blue Diamond Ring</a></h5>
+										<div class="content_price">
+											<span class="price product-price">$38,95</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="left-block">
+										<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p15.jpg" /></a>
+										<div class="quick-view">
+											<a title="Add to my wishlist" class="heart" href="#"></a>
+											<a title="Add to compare" class="compare" href="#"></a>
+											<a title="Quick view" class="search" href="#"></a>
+										</div>
+										<div class="add-to-cart">
+											<a title="Add to Cart" href="#">Add to Cart</a>
+										</div>
+									</div>
+									<div class="right-block">
+										<h5 class="product-name"><a href="#">Superior Bag</a></h5>
+										<div class="content_price">
+											<span class="price product-price">$38,95</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="left-block">
+										<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p16.jpg" /></a>
+										<div class="quick-view">
+											<a title="Add to my wishlist" class="heart" href="#"></a>
+											<a title="Add to compare" class="compare" href="#"></a>
+											<a title="Quick view" class="search" href="#"></a>
+										</div>
+										<div class="add-to-cart">
+											<a title="Add to Cart" href="#">Add to Cart</a>
+										</div>
+									</div>
+									<div class="right-block">
+										<h5 class="product-name"><a href="#">Luxury Lady</a></h5>
+										<div class="content_price">
+											<span class="price product-price">$38,95</span>
+											<span class="price old-price">$52,00</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="left-block">
+										<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p17.jpg" /></a>
+										<div class="quick-view">
+											<a title="Add to my wishlist" class="heart" href="#"></a>
+											<a title="Add to compare" class="compare" href="#"></a>
+											<a title="Quick view" class="search" href="#"></a>
+										</div>
+										<div class="add-to-cart">
+											<a title="Add to Cart" href="#">Add to Cart</a>
+										</div>
+									</div>
+									<div class="right-block">
+										<h5 class="product-name"><a href="#">Smart Phone</a></h5>
+										<div class="content_price">
+											<span class="price product-price">$38,95</span>
+											<span class="price old-price">$52,00</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="tab-2" class="tab-panel">
+							<ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav="true" data-margin="10" data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":4}}'>
+								<li>
+									<div class="left-block">
+										<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p17.jpg" /></a>
+										<div class="quick-view">
+											<a title="Add to my wishlist" class="heart" href="#"></a>
+											<a title="Add to compare" class="compare" href="#"></a>
+											<a title="Quick view" class="search" href="#"></a>
+										</div>
+										<div class="add-to-cart">
+											<a title="Add to Cart" href="#">Add to Cart</a>
+										</div>
+									</div>
+									<div class="right-block">
+										<h5 class="product-name"><a href="#">Luxury Perfume</a></h5>
+										<div class="content_price">
+											<span class="price product-price">$38,95</span>
+											<span class="price old-price">$52,00</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="left-block">
+										<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p18.jpg" /></a>
+										<div class="quick-view">
+											<a title="Add to my wishlist" class="heart" href="#"></a>
+											<a title="Add to compare" class="compare" href="#"></a>
+											<a title="Quick view" class="search" href="#"></a>
+										</div>
+										<div class="add-to-cart">
+											<a title="Add to Cart" href="#">Add to Cart</a>
+										</div>
+									</div>
+									<div class="right-block">
+										<h5 class="product-name"><a href="#">Blue Diamond Ring</a></h5>
+										<div class="content_price">
+											<span class="price product-price">$38,95</span>
+										</div>
+									</div>
+									<div class="price-percent-reduction2">
+										-10% OFF
+									</div>
+								</li>
+								<li>
+									<div class="left-block">
+										<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p19.jpg" /></a>
+										<div class="quick-view">
+											<a title="Add to my wishlist" class="heart" href="#"></a>
+											<a title="Add to compare" class="compare" href="#"></a>
+											<a title="Quick view" class="search" href="#"></a>
+										</div>
+										<div class="add-to-cart">
+											<a title="Add to Cart" href="#">Add to Cart</a>
+										</div>
+									</div>
+									<div class="right-block">
+										<h5 class="product-name"><a href="#">Superior Bag</a></h5>
+										<div class="content_price">
+											<span class="price product-price">$38,95</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="left-block">
+										<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p20.jpg" /></a>
+										<div class="quick-view">
+											<a title="Add to my wishlist" class="heart" href="#"></a>
+											<a title="Add to compare" class="compare" href="#"></a>
+											<a title="Quick view" class="search" href="#"></a>
+										</div>
+										<div class="add-to-cart">
+											<a title="Add to Cart" href="#">Add to Cart</a>
+										</div>
+									</div>
+									<div class="right-block">
+										<h5 class="product-name"><a href="#">Luxury Lady</a></h5>
+										<div class="content_price">
+											<span class="price product-price">$38,95</span>
+											<span class="price old-price">$52,00</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="left-block">
+										<a href="#"><img class="img-responsive" alt="product" src="assets/data/option4/p21.jpg" /></a>
+										<div class="quick-view">
+											<a title="Add to my wishlist" class="heart" href="#"></a>
+											<a title="Add to compare" class="compare" href="#"></a>
+											<a title="Quick view" class="search" href="#"></a>
+										</div>
+										<div class="add-to-cart">
+											<a title="Add to Cart" href="#">Add to Cart</a>
+										</div>
+									</div>
+									<div class="right-block">
+										<h5 class="product-name"><a href="#">Smart Phone</a></h5>
+										<div class="content_price">
+											<span class="price product-price">$38,95</span>
+											<span class="price old-price">$52,00</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ./box product new arrivals -->
+	<!-- Banner -->
+	<div class="block-banner">
+		<div class="container">
+			<div class="block-banner-left">
+				<div class="banner-opacity">
+					<a href="#"><img src="assets/data/option4/banner1.jpg" alt="Banner"></a>
+				</div>
+			</div>
+			<div class="block-banner-right">
+				<div class="banner-opacity">
+					<a href="#"><img src="assets/data/option4/banner2.jpg" alt="Banner"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ./Banner -->
+	<div class="row-blog">
+		<div class="container">
+			<!-- blog list -->
+			<div class="blog-list">
+				<h2 class="page-heading">
+					<span class="page-heading-title">From the blog</span>
+				</h2>
+				<div class="blog-list-wapper">
+					<ul class="owl-carousel" data-dots="false" data-loop="true" data-nav="true" data-margin="30" data-autoplayTimeout="1000" data-autoplayHoverPause="true" data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":4}}'>
+						<li>
+							<div class="post-thumb image-hover2">
+								<a href="#"><img src="assets/data/option4/blog1.jpg" alt="Blog"></a>
+							</div>
+							<div class="post-desc">
+								<h5 class="post-title">
+									<a href="#">Share the love with KuteShop</a>
+								</h5>
+								<div class="post-meta">
+									<span class="date">February 27, 2015</span>
+									<span class="comment">27 comment</span>
+								</div>
+								<div class="readmore">
+									<a href="#">Readmore</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="post-thumb image-hover2">
+								<a href="#"><img src="assets/data/option4/blog2.jpg" alt="Blog"></a>
+							</div>
+							<div class="post-desc">
+								<h5 class="post-title">
+									<a href="#">Share the love with KuteShop</a>
+								</h5>
+								<div class="post-meta">
+									<span class="date">February 27, 2015</span>
+									<span class="comment">27 comment</span>
+								</div>
+								<div class="readmore">
+									<a href="#">Readmore</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="post-thumb image-hover2">
+								<a href="#"><img src="assets/data/option4/blog3.jpg" alt="Blog"></a>
+							</div>
+							<div class="post-desc">
+								<h5 class="post-title">
+									<a href="#">Big sales this summer</a>
+								</h5>
+								<div class="post-meta">
+									<span class="date">February 27, 2015</span>
+									<span class="comment">27 comment</span>
+								</div>
+								<div class="readmore">
+									<a href="#">Readmore</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="post-thumb image-hover2">
+								<a href="#"><img src="assets/data/option4/blog4.jpg" alt="Blog"></a>
+							</div>
+							<div class="post-desc">
+								<h5 class="post-title">
+									<a href="#">How to shop with us</a>
+								</h5>
+								<div class="post-meta">
+									<span class="date">February 27, 2015</span>
+									<span class="comment">27 comment</span>
+								</div>
+								<div class="readmore">
+									<a href="#">Readmore</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- ./blog list -->
+		</div>
+	</div>
+
+	<div class="spacer">&nbsp;</div>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<!-- introduce-box -->
+			<div id="introduce-box" class="row">
+				<div class="col-md-3">
+					<div id="address-box">
+						<a href="#"><img src="assets/data/introduce-logo.png" alt="" /></a>
+						<div id="address-list">
+							<div class="tit-name">Address:</div>
+							<div class="tit-contain">Example Street 68, Mahattan, New York, USA.</div>
+							<div class="tit-name">Phone:</div>
+							<div class="tit-contain">+00 123 456 789</div>
+							<div class="tit-name">Email:</div>
+							<div class="tit-contain">support@business.com</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="introduce-title">Company</div>
+							<ul id="introduce-company" class="introduce-list">
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Testimonials</a></li>
+								<li><a href="#">Affiliate Program</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<div class="introduce-title">My Account</div>
+							<ul id="introduce-Account" class="introduce-list">
+								<li><a href="#">My Order</a></li>
+								<li><a href="#">My Wishlist</a></li>
+								<li><a href="#">My Credit Slip</a></li>
+								<li><a href="#">My Addresses</a></li>
+								<li><a href="#">My Personal In</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<div class="introduce-title">Support</div>
+							<ul id="introduce-support" class="introduce-list">
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Testimonials</a></li>
+								<li><a href="#">Affiliate Program</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div id="contact-box">
+						<div class="introduce-title">Newsletter</div>
+						<div class="input-group" id="mail-box">
+							<input type="text" placeholder="Your Email Address" />
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">OK</button>
+							</span>
+						</div><!-- /input-group -->
+						<div class="introduce-title">Let's Socialize</div>
+						<div class="social-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-pinterest-p"></i></a>
+							<a href="#"><i class="fa fa-vk"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+						</div>
+					</div>
+
+				</div>
+			</div><!-- /#introduce-box -->
+			<!-- #trademark-box -->
+			<div id="trademark-box" class="row">
+				<div class="col-sm-12">
+					<ul id="trademark-list">
+						<li id="payment-methods">Accepted Payment Methods</li>
+						<li>
+							<a href="#"><img src="assets/data/trademark-ups.jpg" alt="ups" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="assets/data/trademark-qiwi.jpg" alt="ups" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="assets/data/trademark-wu.jpg" alt="ups" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="assets/data/trademark-cn.jpg" alt="ups" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="assets/data/trademark-visa.jpg" alt="ups" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="assets/data/trademark-mc.jpg" alt="ups" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="assets/data/trademark-ems.jpg" alt="ups" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="assets/data/trademark-dhl.jpg" alt="ups" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="assets/data/trademark-fe.jpg" alt="ups" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="assets/data/trademark-wm.jpg" alt="ups" /></a>
+						</li>
+					</ul>
+				</div>
+			</div> <!-- /#trademark-box -->
+
+			<p class="text-center">Copyrights &#169; 2015 KuteShop. All Rights Reserved. Designed by KuteThemes.com</p>
+		</div><!-- /#footer-menu-box -->
+		</div>
+	</footer>
+
+	<a href="#" class="scroll_top" title="Scroll to Top" style="display: inline;">Scroll</a>
+	<!-- Script-->
+	<script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="~/lib/popper/popper.min.js"></script>
+	<script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="~/lib/select2/js/select2.min.js"></script>
+	<script type="text/javascript" src="~/lib/jquery.bxslider/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="~/lib/owl.carousel/owl.carousel.min.js"></script>
+	<!-- COUNTDOWN -->
+	<script type="text/javascript" src="~/lib/countdown/jquery.plugin.min.js"></script>
+	<script type="text/javascript" src="~/lib/jquery.countdown/jquery.countdown.min.js"></script>
+	<!-- ./COUNTDOWN -->
+	<script type="text/javascript" src="~/js/jquery.actual.min.js"></script>
+	<script type="text/javascript" src="~/js/theme-script.js"></script>
+	<script type="text/javascript" src="~/js/option4.js"></script>
+</body>
+</html>
