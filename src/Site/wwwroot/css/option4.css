@@ -363,18 +363,19 @@
 }
 
 
-.option4 .group-banner4{
+.option4 .block-banner{
 	background: #fff;
-	padding: 32px 0;
 }
-.option4 .group-banner4 .list-banner{
+
+.option4 .block-banner .list-banner{
 	margin-left: -5px;
 	margin-right: -5px;
 }
-.option4 .group-banner4 .list-banner li{
+
+.option4 .block-banner .list-banner li{
 	display: inline;
 	float: left;
-	padding: 0 5px;
+	padding: 0 1px;
 }
 
 .option4 .header-top-right .homeslider .bx-controls-direction .bx-prev, 
@@ -687,3 +688,8 @@
 		margin-top: 25px;
 	}
 }
+
+.bx-wrapper {
+	border: none;
+}
+

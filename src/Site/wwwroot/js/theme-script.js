@@ -3,7 +3,7 @@
     /* ---------------------------------------------
      Scripts initialization
      --------------------------------------------- */
-    $(window).load(function() {
+    $(window).on('load', function() {
         // auto width megamenu
         auto_width_megamenu();
         resizeTopmenu();
@@ -68,10 +68,11 @@
             });
         }
         /* Close top banner*/
-        $(document).on('click','.btn-close',function(){
-            $(this).closest('.top-banner').animate({ height: 0, opacity: 0 },1000);
-            return false;
-        })
+		$(document).on('click', '.btn-close', function () {
+			$(this).closest('.top-banner').animate({ height: 0, opacity: 0 }, 1000);
+			return false;
+		});
+
         /** SELECT CATEGORY **/
         $('.select-category').select2();
         /* Toggle nav menu*/
@@ -79,51 +80,7 @@
             $(this).closest('.nav-menu').find('.navbar-collapse').toggle();
             return false;
         })
-        /** HOME SLIDE**/
-        if($('#home-slider').length >0 && $('#contenhomeslider').length >0){
-            var slider = $('#contenhomeslider').bxSlider(
-                {
-                    nextText:'<i class="fa fa-angle-right"></i>',
-                    prevText:'<i class="fa fa-angle-left"></i>',
-                    auto: true,
-                }
 
-            );
-        }
-        /** Custom page sider**/
-        if($('#home-slider').length >0 && $('#contenhomeslider-customPage').length >0){
-            var slider = $('#contenhomeslider-customPage').bxSlider(
-                {
-                    nextText:'<i class="fa fa-angle-right"></i>',
-                    prevText:'<i class="fa fa-angle-left"></i>',
-                    auto: true,
-                    pagerCustom: '#bx-pager',
-                    nextSelector: '#bx-next',
-                    prevSelector: '#bx-prev',
-                }
-
-            );
-        }
-
-        if($('#home-slider').length >0 && $('#slide-background').length >0){
-            var slider = $('#slide-background').bxSlider(
-                {
-                    nextText:'<i class="fa fa-angle-right"></i>',
-                    prevText:'<i class="fa fa-angle-left"></i>',
-                    auto: true,
-                    onSlideNext: function ($slideElement, oldIndex, newIndex) {
-                       var corlor = $($slideElement).data('background');   
-                       $('#home-slider').css('background',corlor);     
-                    },
-                    onSlidePrev: function ($slideElement, oldIndex, newIndex) {
-                       var corlor = $($slideElement).data('background');   
-                       $('#home-slider').css('background',corlor);     
-                    }
-                }
-
-            );
-            slider.goToNextSlide();
-        }
         
         /* elevator click*/ 
         $(document).on('click','a.btn-elevator',function(e){
@@ -136,11 +93,6 @@
             $('html, body').stop().animate({
                 'scrollTop': $target.offset().top-50
             }, 500);
-            return false;
-        })
-        /* scroll top */ 
-        $(document).on('click','.scroll_top',function(){
-            $('body,html').animate({scrollTop:0},400);
             return false;
         })
         /** #brand-showcase */

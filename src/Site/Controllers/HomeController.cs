@@ -14,12 +14,18 @@ namespace Site.Controllers
 	{
 		private IClusterClient client;
 
-		public HomeController(OrleansConnector connector)
+		//public HomeController(OrleansConnector connector)
+		public HomeController()
 		{
-			client = connector.Client;
+			//client = connector.Client;
 		}
 
 		public IActionResult Index()
+		{
+			return View();
+		}
+
+		public IActionResult Index2()
 		{
 			return View();
 		}
